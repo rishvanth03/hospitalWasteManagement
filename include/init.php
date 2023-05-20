@@ -1,6 +1,6 @@
 <?php
 
-$_home = '/hwms';
+$_home = '/hospitalWasteManagement';
 $http = isset($_SERVER['HTTPS']) ? 'https://' : 'http://';
 $_path = $http . $_SERVER['HTTP_HOST'] . $_home;
 
@@ -32,6 +32,7 @@ function footer()
 }
 
 
-function settings(){
+function settings()
+{
     require 'settings.php';
 }

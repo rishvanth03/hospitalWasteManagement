@@ -22,12 +22,8 @@ $userData = $_SESSION['userDataHwms'];
 
             <!-- LOGO -->
             <a href="index-2.html" class="logo text-center logo-light">
-                <span class="logo-lg">
-                    <img src="<?php echo $path ?>/assets/images/logo.png" alt="" height="16">
-                </span>
-                <span class="logo-sm">
-                    <img src="<?php echo $path ?>/assets/images/logo_sm.png" alt="" height="16">
-                </span>
+            <h1>WasteCare</h1>
+
             </a>
 
             <!-- LOGO -->

@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v13.1.1 (64 bit)
-MySQL - 10.4.27-MariaDB : Database - hwms
+MySQL - 10.4.28-MariaDB : Database - hwms
 *********************************************************************
 */
 
@@ -85,9 +85,12 @@ CREATE TABLE `master_team_manager` (
   `email` varchar(150) DEFAULT NULL,
   `phone` varchar(15) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `master_team_manager` */
+
+insert  into `master_team_manager`(`user_id`,`name`,`email`,`phone`) values 
+(1,'Team Manager',NULL,'');
 
 /*Table structure for table `pickup_log` */
 
@@ -150,7 +153,10 @@ CREATE TABLE `user_login` (
 /*Data for the table `user_login` */
 
 insert  into `user_login`(`user_id`,`username`,`password`,`role`) values 
+(1,'admin','admin',5),
+(1,'deli','deli',4),
 (1,'rish','user',1),
+(1,'team','team',3),
 (1,'user','user',2);
 
 /*Table structure for table `user_role` */
@@ -162,13 +168,16 @@ CREATE TABLE `user_role` (
   `name` varchar(25) DEFAULT NULL,
   `resource` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 /*Data for the table `user_role` */
 
 insert  into `user_role`(`id`,`name`,`resource`) values 
 (1,'Admin','1-2-3-4-5-'),
-(2,'Hospital','2-');
+(2,'Hospital','2-'),
+(3,'Team','4-'),
+(4,'Delivery','5-'),
+(5,'admin','1-3-');
 
 /*Table structure for table `wastage_log` */
 

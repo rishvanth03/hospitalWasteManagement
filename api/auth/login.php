@@ -15,7 +15,7 @@ if ($checkResult->num_rows > 0) {
     $role = $row['role'];
     $roleName = $row['name'];
     $userId = $row['user_id'];
-    if ($role == '1') {
+    if ($role == '1' || $role == '5') {
 
         $sql = "select * from master_admin where user_id = $row[user_id]";
         $result = mysqli_query($db, $sql);
@@ -26,6 +26,10 @@ if ($checkResult->num_rows > 0) {
     } else if ($role == '3') {
 
         $sql = "select * from master_team_manager where user_id = $row[user_id]";
+        $result = mysqli_query($db, $sql);
+    } else if ($role == '4') {
+
+        $sql = "select * from master_delivery where user_id = $row[user_id]";
         $result = mysqli_query($db, $sql);
     }
     if (mysqli_num_rows($result) > 0) {

@@ -16,6 +16,14 @@
         header("Location: ../wastage");
     }
 
+    if ($userData['roleId'] == 3) {
+        header("Location: ../wastage_slot");
+    }
+
+    if ($userData['roleId'] == 4) {
+        header("Location: ../wastage_delivery");
+    }
+
     ?>
 
     <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
@@ -26,12 +34,8 @@
 
                 <!-- LOGO -->
                 <a href="index-2.html" class="logo text-center logo-light">
-                    <span class="logo-lg">
-                        <img src="<?php echo $path ?>/assets/images/logo.png" alt="" height="16">
-                    </span>
-                    <span class="logo-sm">
-                        <img src="<?php echo $path ?>/assets/images/logo_sm.png" alt="" height="16">
-                    </span>
+                    <h1>WasteCare</h1>
+
                 </a>
 
                 <!-- LOGO -->
@@ -387,9 +391,9 @@
             <!-- END wrapper -->
 
             <!-- Right Sidebar -->
-          <?php  
-          settings()
-          ?>
+            <?php
+            settings()
+            ?>
 
             <div class="rightbar-overlay"></div>
             <!-- /End-bar -->

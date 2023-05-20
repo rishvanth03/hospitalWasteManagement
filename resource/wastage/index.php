@@ -23,12 +23,7 @@ $userData = $_SESSION['userDataHwms'];
 
             <!-- LOGO -->
             <a href="index-2.html" class="logo text-center logo-light">
-                <span class="logo-lg">
-                    <img src="<?php echo $path ?>/assets/images/logo.png" alt="" height="16">
-                </span>
-                <span class="logo-sm">
-                    <img src="<?php echo $path ?>/assets/images/logo_sm.png" alt="" height="16">
-                </span>
+                <h1>WasteCare</h1>
             </a>
 
             <!-- LOGO -->
@@ -91,7 +86,7 @@ $userData = $_SESSION['userDataHwms'];
                                     <div class="mb-3">
                                         <label for="type" class="form-label">Type</label>
                                         <!-- <input type="text" id="type" class="form-control" placeholder="Enter the Wastage Type"> -->
-                                        <select name="type" id="type"class="form-control">
+                                        <select name="type" id="type" class="form-control">
                                             <option value="Infectious">Infectious Waste</option>
                                             <option value="Sharps">Sharps Waste</option>
                                             <option value="Pharmaceutical">Pharmaceutical Waste</option>
