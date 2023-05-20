@@ -39,10 +39,10 @@ if ($checkResult->num_rows > 0) {
         header("Location: ../../");
         exit();
     } else {
-        header("Location: ../../auth/login.php?error=Invalid User");
+        header("Location: ../../auth/login.html?error=Invalid User");
         exit();
     }
 } else {
-    header("Location: ../../auth/login.php?error=Invalid User");
+    header("Location: ../../auth/login.html?error=Invalid User");
     exit();
 }
